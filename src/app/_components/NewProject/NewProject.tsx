@@ -18,6 +18,8 @@ const NewProject = () => {
       live_url: '',
       github_url: '',
       project_date: '',
+      Future: '',
+      Future_description: '',
       image_url: null as File | null,
     },
     onSubmit: (values, { setSubmitting, resetForm }) => {

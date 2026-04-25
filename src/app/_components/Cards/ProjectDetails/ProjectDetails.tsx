@@ -9,6 +9,13 @@ const ProjectDetails = ({ formik }: { formik: FormikProps<Project> }) => {
       <CardTitle title="Project Details" icon={<FileChartColumnIncreasing />} />
       <div className="flex flex-col gap-3">
         <Input
+          name="title"
+          label="Project Title"
+          placeholder="Enter your project title"
+          type="text"
+          formik={formik}
+        />
+        <Input
           name="name"
           label="Project Name"
           placeholder="Enter your project name"
@@ -16,12 +23,24 @@ const ProjectDetails = ({ formik }: { formik: FormikProps<Project> }) => {
           formik={formik}
         />
         <Input
-          name="title"
-          label="Project Title"
-          placeholder="Enter your project title"
-          type="text"
+          label="FUTURE"
+          placeholder="Enter future details"
           formik={formik}
+          name="Future"
+          type="text"
         />
+        <div className="flex flex-col gap-2 w-full">
+          <label className=" uppercase text-label-color text-12 tracking-[2px] font-semibold">
+            FUTURE DESCRIPTION
+          </label>
+          <textarea
+            name="Future_description"
+            placeholder="Enter future description"
+            onChange={formik?.handleChange}
+            value={formik?.values?.Future_description || ''}
+            className="bg-input-color resize-none text-white p-2 h-32 border-none rounded-md w-full focus:outline-none focus:ring-1 focus:ring-white-color/10"
+          />
+        </div>
         <div className="flex flex-col gap-2 w-full">
           <label className="text-14 text-white">Project Description</label>
           <textarea

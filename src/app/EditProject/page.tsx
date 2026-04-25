@@ -1,5 +1,4 @@
 import Title from '../_components/Title/Title';
-import SelectProjectToEdit from '../_components/EditProjectComponents/SelectProjectToEdit/SelectProjectToEdit';
 import getAllProjects from '../../../lib/SsrFunctions/getAllProjects';
 import ProjectDetails from '../_components/EditProjectComponents/ProjectDetails/ProjectDetails';
 import { ProjectData } from '../interface';

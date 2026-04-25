@@ -25,6 +25,8 @@ const ProjectDetails = ({ projectsData }: { projectsData: ProjectData[] }) => {
       live_url: data?.live_url || '',
       github_url: data?.github_url || '',
       project_date: data?.project_date || '',
+      Future: data?.Future || '',
+      Future_description: data?.Future_description || '',
       image_url: data?.image_url || (null as File | null),
     },
     onSubmit: (data) => {
@@ -111,6 +113,25 @@ const ProjectDetails = ({ projectsData }: { projectsData: ProjectData[] }) => {
                 name="project_date"
                 type="date"
               />
+              <Input
+                label="FUTURE"
+                placeholder="Enter future details"
+                formik={formik}
+                name="Future"
+                type="text"
+              />
+              <div className="flex flex-col gap-2 w-full">
+                <label className=" uppercase text-label-color text-12 tracking-[2px] font-semibold">
+                  FUTURE DESCRIPTION
+                </label>
+                <textarea
+                  name="Future_description"
+                  placeholder="Enter future description"
+                  onChange={formik?.handleChange}
+                  value={formik?.values?.Future_description || ''}
+                  className="bg-input-color resize-none text-white p-2 h-32 border-none rounded-md w-full focus:outline-none focus:ring-1 focus:ring-white-color/10"
+                />
+              </div>
             </div>
           </div>
           <div className="grid md:grid-cols-[2fr_1fr] gap-5 pb-3 border-b border-white/20">

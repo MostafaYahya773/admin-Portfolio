@@ -25,10 +25,6 @@ const Navbar = ({ token }: { token: string | null }) => {
       name: 'Edit project',
       href: '/EditProject',
     },
-    {
-      name: 'Delete Project',
-      href: '/delete-project',
-    },
   ];
   const link = useMemo(() => {
     const pathname = usePathname();

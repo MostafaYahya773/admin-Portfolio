@@ -7,6 +7,8 @@ export interface Project {
   live_url: string;
   github_url: string;
   project_date: string;
+  Future: string;
+  Future_description: string;
   image_url: File | null;
 }
 export interface LinksPops {
