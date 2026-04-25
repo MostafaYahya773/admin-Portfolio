@@ -23,7 +23,7 @@ const Navbar = ({ token }: { token: string | null }) => {
     },
     {
       name: 'Edit project',
-      href: '/edit-project',
+      href: '/EditProject',
     },
     {
       name: 'Delete Project',

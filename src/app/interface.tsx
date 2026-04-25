@@ -13,3 +13,8 @@ export interface LinksPops {
   name: string;
   href: string;
 }
+
+export interface ProjectData {
+  name: string;
+  id: string;
+}

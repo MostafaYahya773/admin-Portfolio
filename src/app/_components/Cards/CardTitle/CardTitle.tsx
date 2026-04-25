@@ -8,7 +8,7 @@ const CardTitle = ({
   icon: React.ReactNode;
 }) => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 w-full">
       <span className="text-24 text-third-color">{icon}</span>
       <h3 className="text-24 text-white font-semibold">{title}</h3>
     </div>
